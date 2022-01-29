@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <StackPane fx:id="stackpn1" layoutX="180.0" prefHeight="450.0" prefWidth="525.0">
+         <children>
+            <AnchorPane fx:id="anpn1" prefHeight="450.0" prefWidth="525.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <JFXCheckBox layoutX="124.0" layoutY="55.0" text="Monday" />
+                  <JFXCheckBox layoutX="211.0" layoutY="55.0" text="Tuesday" />
+                  <JFXCheckBox layoutX="290.0" layoutY="55.0" text="Wednesday" />
+                  <JFXCheckBox layoutX="385.0" layoutY="55.0" text="Thursday" />
+                  <JFXCheckBox layoutX="124.0" layoutY="100.0" text="Friday" />
+                  <JFXCheckBox layoutX="40.0" layoutY="100.0" text="Saturday" />
+                  <JFXCheckBox layoutX="40.0" layoutY="55.0" text="Sunday" />
+                  <TextField layoutX="97.0" layoutY="151.0" />
+                  <Label layoutX="23.0" layoutY="155.0" text="period a day" />
+                  <Label layoutX="37.0" layoutY="20.0" text="working days" />
+                  <JFXButton fx:id="button" layoutX="383.0" layoutY="397.0" onAction="#next1" prefHeight="25.0" prefWidth="87.0" text="Next" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anpn2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <JFXButton fx:id="button1" layoutX="430.0" layoutY="405.0" onAction="#next2" prefHeight="25.0" prefWidth="81.0" text="Next" />
+                  <TableView fx:id="tab1" layoutX="14.0" layoutY="14.0" prefHeight="286.0" prefWidth="504.0">
+                    <columns>
+                      <TableColumn fx:id="idColumn" prefWidth="42.0" text="id" />
+                      <TableColumn fx:id="ModuleNameColumn" prefWidth="153.0" text="Module Name" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="tf1" layoutX="101.0" layoutY="324.0" />
+                  <TextField fx:id="tf2" layoutX="101.0" layoutY="367.0" />
+                  <Label layoutX="14.0" layoutY="371.0" text="Module name" />
+                  <Label layoutX="37.0" layoutY="328.0" text="id" />
+                  <JFXButton fx:id="button2" layoutX="277.0" layoutY="324.0" onAction="#Addm" text="Add" />
+                  <JFXButton fx:id="button3" layoutX="277.0" layoutY="367.0" onAction="#remove1" text="Remove" />
+                  <JFXButton layoutX="336.0" layoutY="405.0" onAction="#next1" text="Preview" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <AnchorPane prefHeight="450.0" prefWidth="180.0" style="-fx-background-color: #5DADE2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="520.0">
+         <children>
+            <AnchorPane prefHeight="50.0" prefWidth="180.0">
+               <children>
+                  <Label layoutX="78.0" layoutY="17.0" text="start" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="50.0" prefHeight="50.0" prefWidth="180.0" />
+            <AnchorPane layoutY="100.0" prefHeight="50.0" prefWidth="180.0" />
+            <AnchorPane layoutY="150.0" prefHeight="50.0" prefWidth="180.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
