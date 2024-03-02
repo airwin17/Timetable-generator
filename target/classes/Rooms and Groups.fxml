@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RGController">
+   <children>
+      <Label layoutX="25.0" layoutY="27.0" prefHeight="17.0" prefWidth="76.0" text="Group name" />
+      <Label layoutX="28.0" layoutY="53.0" prefHeight="17.0" prefWidth="70.0" text="Group size" />
+      <TextField fx:id="namegrouptf" layoutX="104.0" layoutY="23.0" />
+      <TextField fx:id="sizegrouptf" layoutX="104.0" layoutY="49.0" />
+      <TableView fx:id="grouptab" layoutX="28.0" layoutY="100.0" prefHeight="252.0" prefWidth="296.0">
+        <columns>
+            <TableColumn fx:id="idgroupcol" prefWidth="59.0" text="ID" />
+          <TableColumn fx:id="namegroupcol" prefWidth="125.0" text="Group name" />
+          <TableColumn fx:id="sizegroupcol" prefWidth="110.0" text="Group size" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="addgroupbut" layoutX="260.0" layoutY="23.0" onAction="#addgroupbut" prefHeight="25.0" prefWidth="70.0" text="Add" />
+      <JFXButton fx:id="remgroupbut" layoutX="260.0" layoutY="49.0" onAction="#remgroupbut" prefHeight="25.0" prefWidth="70.0" text="Remove" />
+      <TableView fx:id="roomtab" layoutX="340.0" layoutY="100.0" prefHeight="252.0" prefWidth="296.0">
+        <columns>
+          <TableColumn fx:id="idroomcol" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="roomcol" prefWidth="75.0" text="Room" />
+            <TableColumn fx:id="capacityroomcol" prefWidth="75.0" text="Capacity" />
+            <TableColumn fx:id="machinroomcol" prefWidth="75.0" text="Machine" />
+        </columns>
+      </TableView>
+      <Label layoutX="340.0" layoutY="27.0" text="Room" />
+      <Label layoutX="340.0" layoutY="53.0" text="Capacity" />
+      <TextField fx:id="roomtf" layoutX="393.0" layoutY="23.0" />
+      <TextField fx:id="capacityroomtf" layoutX="393.0" layoutY="49.0" />
+      <CheckBox fx:id="machinechb" layoutX="393.0" layoutY="75.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="76.0" text="Machine" />
+      <JFXButton fx:id="addroombut" layoutX="551.0" layoutY="23.0" onAction="#addroombut" text="Add" />
+      <JFXButton fx:id="remroombut" layoutX="551.0" layoutY="46.0" onAction="#remroombut" text="Remove" />
+      <JFXButton layoutX="590.0" layoutY="361.0" onAction="#next" text="Next" />
+      <JFXButton layoutX="533.0" layoutY="361.0" onAction="#preview" text="Preveiw" />
+   </children>
+</AnchorPane>
