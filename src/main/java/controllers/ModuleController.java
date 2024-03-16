@@ -1,4 +1,4 @@
-package application;
+package controllers;
 
 import java.io.IOException;
 
@@ -6,6 +6,9 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXComboBox;
 
+import Models.Module;
+import Models.Data;
+import Models.Instructor;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
@@ -104,13 +107,13 @@ public class ModuleController {
 		}
 	}
 	@FXML public void previews(ActionEvent e) throws IOException {
-		root= FXMLLoader.load(getClass().getResource("Instructors.fxml"));
+		root= FXMLLoader.load(getClass().getResource("/Instructors.fxml"));
 		stage= (Stage)((Node)e.getSource()).getScene().getWindow();
 		scene=new Scene(root);
 		stage.setScene(scene);
 	}
 	@FXML public void next(ActionEvent e) throws IOException {
-		root= FXMLLoader.load(getClass().getResource("ModulesNeeds.fxml"));
+		root= FXMLLoader.load(getClass().getResource("/ModulesNeeds.fxml"));
 		stage= (Stage)((Node)e.getSource()).getScene().getWindow();
 		scene=new Scene(root);
 		stage.setScene(scene);

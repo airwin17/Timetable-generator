@@ -1,7 +1,6 @@
-package application;
+package Models;
 
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 
@@ -21,6 +20,9 @@ public class Result {
 		setModule(new SimpleStringProperty(class1.getModule().getModuleName().getValue()));
 		setRoom(new SimpleStringProperty(class1.getRoom().getRonb().getValue()));
 	}
+	private void setGroupn(SimpleStringProperty simpleStringProperty) {
+		groupn = simpleStringProperty;
+	}
 	public ObservableValue<Number> getPeriode() {
 		return periode;
 	}
@@ -39,12 +41,6 @@ public class Result {
 	public void setClass1(ObservableValue<Class> class1) {
 		this.class1 = class1;
 	}
-	public ObservableValue<String> getGroupn() {
-		return groupn;
-	}
-	public void setGroupn(ObservableValue<String> groupn) {
-		this.groupn = groupn;
-	}
 	public ObservableValue<String> getInstructor() {
 		return instructor;
 	}
@@ -62,6 +58,9 @@ public class Result {
 	}
 	public void setRoom(ObservableValue<String> room) {
 		this.room = room;
+	}
+	public ObservableValue<String> getGroupn() {
+		return groupn;
 	}
 
 }

@@ -1,11 +1,10 @@
-package application;
+package controllers;
 
 import java.io.IOException;
 
-import javax.xml.crypto.Data;
-
 import com.jfoenix.controls.JFXButton;
 
+import Models.Data;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -52,14 +51,13 @@ public class StartController {
 			if (Integer.parseInt(dpwtf.getText())<=7&&Integer.parseInt(ppdtf.getText())<=8) {
 				Data.daysPerWeek=Integer.parseInt(dpwtf.getText());
 				Data.periodsPerDay=Integer.parseInt(ppdtf.getText());
-				root= FXMLLoader.load(getClass().getResource("Rooms and Groups.fxml"));
+				root= FXMLLoader.load(getClass().getResource("/Rooms and Groups.fxml"));
 				stage= (Stage)((Node)e.getSource()).getScene().getWindow();
 				scene=new Scene(root);
 				stage.setScene(scene);
 				stage.show();
 			}
 		} catch (NumberFormatException e1) {
-			
 			
 		} catch (IOException e1) {
 			

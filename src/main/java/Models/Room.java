@@ -1,4 +1,4 @@
-package application;
+package Models;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
@@ -47,6 +47,9 @@ public class Room {
 	public void setRotypeM(ObservableValue<Boolean> rotypeM) {
 		this.rotypeM = rotypeM;
 	}
+	public String toString() {
+		return roid.getValue().toString()+roCapacity.getValue()+rotypeM.getValue();
+    }
 	
 
 }

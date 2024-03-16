@@ -1,9 +1,12 @@
-package application;
+package controllers;
 
 import java.io.IOException;
 
 import com.jfoenix.controls.JFXButton;
 
+import Models.Data;
+import Models.Group;
+import Models.Room;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -58,6 +61,7 @@ public class RGController  {
 		capacityroomcol.setCellValueFactory(cellData->cellData.getValue().getoRoCapacity());
 		machinroomcol.setCellValueFactory(cellData->cellData.getValue().getoRotypeM());
 		roomtab.setItems(Data.roomso);
+		
 	}
 	@FXML public void addgroupbut(ActionEvent e) {
 		try {
@@ -78,12 +82,16 @@ public class RGController  {
 	@FXML public void addroombut(ActionEvent e) {
 		try {
 			ObservableValue<String> a =new SimpleStringProperty(roomtf.getText());
-			ObservableValue<Boolean> b=new SimpleBooleanProperty(machinechb.isCache());
+			ObservableValue<Boolean> b=new SimpleBooleanProperty(machinechb.isSelected());
 			ObservableValue<Number> c=new SimpleIntegerProperty(Integer.valueOf(capacityroomtf.getText()));
-			roomtab.getItems().add(new Room(a,c,b));
+            Room room=new Room(a,c,b);
+			roomtab.getItems().add(room);
 		} catch (NumberFormatException e1) {
 			
 		}
+	}
+	@FXML public void machinechb(ActionEvent e) {
+	
 	}
 	@FXML public void remroombut(ActionEvent e) {
 		try {
@@ -92,14 +100,14 @@ public class RGController  {
 		}
 	}
 	@FXML public void next(ActionEvent e) throws IOException {
-		root= FXMLLoader.load(getClass().getResource("Instructors.fxml"));
+		root= FXMLLoader.load(getClass().getResource("/Instructors.fxml"));
 		stage= (Stage)((Node)e.getSource()).getScene().getWindow();
 		scene=new Scene(root);
 		stage.setScene(scene);
 		stage.show();
 	}
 	@FXML public void preview(ActionEvent e) throws IOException {
-		root= FXMLLoader.load(getClass().getResource("Start.fxml"));
+		root= FXMLLoader.load(getClass().getResource("/Start.fxml"));
 		stage= (Stage)((Node)e.getSource()).getScene().getWindow();
 		scene=new Scene(root);
 		stage.setScene(scene);

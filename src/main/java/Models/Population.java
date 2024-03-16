@@ -1,4 +1,4 @@
-package application;
+package Models;
 
 import java.util.ArrayList;
 import java.util.HashSet;

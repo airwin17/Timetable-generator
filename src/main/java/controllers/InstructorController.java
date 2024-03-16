@@ -1,9 +1,11 @@
-package application;
+package controllers;
 
 import java.io.IOException;
 
 import com.jfoenix.controls.JFXButton;
 
+import Models.Data;
+import Models.Instructor;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
@@ -245,14 +247,14 @@ public class InstructorController {
 			}
 	}
 	@FXML public void previews(ActionEvent e) throws IOException {
-		root= FXMLLoader.load(getClass().getResource("Rooms and Groups.fxml"));
+		root= FXMLLoader.load(getClass().getResource("/Rooms and Groups.fxml"));
 		stage= (Stage)((Node)e.getSource()).getScene().getWindow();
 		scene=new Scene(root);
 		stage.setScene(scene);
 		stage.show();
 	}
 	@FXML public void next(ActionEvent e) throws IOException {
-		root= FXMLLoader.load(getClass().getResource("Modules.fxml"));
+		root= FXMLLoader.load(getClass().getResource("/Modules.fxml"));
 		stage= (Stage)((Node)e.getSource()).getScene().getWindow();
 		scene=new Scene(root);
 		stage.setScene(scene);

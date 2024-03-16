@@ -1,7 +1,10 @@
-package application;
+package controllers;
 
 import com.jfoenix.controls.JFXButton;
 
+import Models.Data;
+import Models.Population;
+import Models.Result;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;

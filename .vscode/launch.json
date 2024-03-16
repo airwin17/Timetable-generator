@@ -16,8 +16,8 @@
             "name": "Main",
             "request": "launch",
             "mainClass": "malikait.Main",
-            "projectName": "timetable-generator",
-            "console": "integratedTerminal",
+            "projectName": "timetabler",
+            "vmArgs": "--module-path C:\\Users\\aitou\\Desktop\\dev\\lib\\javafx-sdk-17.0.10\\lib --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
